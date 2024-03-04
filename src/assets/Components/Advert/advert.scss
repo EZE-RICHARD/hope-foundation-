@@ -1,0 +1,59 @@
+@use"/src/assets/variables/variables.scss" as *;
+
+.advert_section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    span{
+        width:95%;
+        display: inline-block;
+        text-align: center;
+        @include desktop{
+            width: 60%;
+        }
+        img{
+            width: 40%;
+            object-fit: cover;
+            @include desktop{
+                width: 30%;
+            }
+        }
+    }
+    form{
+        margin-top: 2%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        input{
+            width: 70%;
+            height: 5dvh;
+            font-size: 1.2rem;
+            @include tablet{
+                width: 70%;
+            }
+            @include desktop{
+                width: 50%;
+            }
+            
+            &::placeholder{
+                font-size: 1.2rem;
+            }
+        }
+        button{
+            
+            width: 30%;
+            height: 5dvh;
+            border: 0;
+            background-color: #3771A5;
+            color: white;
+            @include tablet{
+                width: 20%;
+            }
+            @include desktop{
+                width: 10%;
+            }
+        }
+    }
+}

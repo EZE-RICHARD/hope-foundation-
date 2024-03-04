@@ -1,0 +1,10 @@
+.carousel_container{
+    background-color: white;
+    height: fit-content;
+    overflow: hidden;
+    img{
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+}

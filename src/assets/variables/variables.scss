@@ -1,0 +1,25 @@
+$tablets:426px;
+$desktop:840px;
+$tonned_black:#3F3F3F;
+$def_color:#E2E2E2;
+
+@mixin desktop{
+    @media (min-width:#{$desktop}){
+        @content
+    }
+};
+
+@mixin tablet{
+    @media (min-width:#{$tablets}){
+        @content
+    }
+}
+.flex{
+    display: flex;
+}
+.block{
+    display: block;
+}
+.none{
+    display: none;
+}

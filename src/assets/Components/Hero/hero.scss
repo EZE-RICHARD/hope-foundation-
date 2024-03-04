@@ -1,0 +1,166 @@
+@use "/src/assets/variables/variables.scss" as *;
+@use "/src/assets/variables/keyframes.scss" as *;
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  background-color: $tonned_black;
+  padding: 1rem;
+  @include desktop {
+    padding: 2rem;
+    height: 100dvh;
+  }
+}
+
+.illustration {
+  position: absolute;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.orange_stroke {
+  right: 0;
+  top: 0;
+  width: 100px;
+  animation: customAni 10s ease 0s infinite normal none;
+  @include desktop {
+    width: 300px;
+  }
+}
+
+
+.multiple_stroke {
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  /* Copy code to element you want to animate */
+  animation: slower_blink 8s ease 5s infinite normal none;
+  @include desktop {
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+.yellow_dot {
+  top: 40%;
+  left: 5%;
+  width: 50px;
+  /* Copy code to element you want to animate */
+  animation: jello 2s ease 0s infinite normal none;
+  @include desktop {
+    top: 25%;
+    left: 5%;
+  }
+}
+
+
+.hero_parent {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+
+  .hero_figure {
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    img {
+      z-index: 2;
+      width: 100%;
+      @include tablet{
+        width: 45%;
+      }
+      @include desktop{
+        width: 30%;
+      }
+    }
+  }
+}
+
+.hero_cta {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-align: right;
+  gap: 2rem;
+  @include desktop {
+    text-align: left;
+    flex-direction: row;
+  }
+  .ctas1 {
+    z-index: 2;
+    width: 100%;
+    color: $def_color;
+    @include desktop {
+      width: 30%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+    }
+    h2 {
+      font-weight: 200;
+      font-size: 3.5rem;
+    }
+  }
+
+  .ctas2 {
+    text-align: right;
+    z-index: 1;
+    color: $def_color;
+    width: 100%;
+    @include desktop {
+      width: 30%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    P {  
+      margin-top: 1rem;
+    }
+    h1 {
+      margin-top: 1rem;
+    }
+    .hero_cta_text{
+      z-index: 2;
+      p{
+        z-index: 999;
+      }
+      h1{
+        z-index: 999;
+      }
+    }
+  }
+  .socials {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: right;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.social_iocns {
+  font-size: 1.5rem;
+  color: $def_color;
+}
+
+

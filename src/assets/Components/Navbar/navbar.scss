@@ -1,0 +1,47 @@
+@use "/src/assets/variables/variables.scss"  as *;
+
+header{
+    width: 100%;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    @include desktop(){
+        display: flex;
+    }
+    figure{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        z-index: 2;
+        img{
+            width: 50%;
+            // aspect-ratio: 1/1;
+            object-fit: cover;
+            @include tablet{
+                width: 30%;
+            }
+        }
+        .menu{
+            z-index: 2;
+            color: #fff;
+            display: inline-block;
+            @include desktop(){
+                display: none;
+            }
+        }
+    }
+    nav{
+        display: none;
+        @include desktop(){
+            display: flex;
+            justify-content: space-between;
+            width: 20%;
+            a{
+                text-decoration: none;
+                color: #fff;
+                z-index: 2;
+            }
+        }
+    }
+}

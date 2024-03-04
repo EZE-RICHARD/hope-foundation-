@@ -1,0 +1,16 @@
+@use"/src/assets/variables/variables.scss" as *;
+
+.bottom{
+    margin-top: 15%;
+    text-align: center;
+    background-color: $tonned_black;
+    color: #fff;
+    padding: 1%;
+    @include desktop{
+        margin-top: 5%;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+}
